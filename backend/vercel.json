@@ -11,9 +11,10 @@
         {
             "src": "/(.*)",
             "dest": "/server.js"
-        },
-      "headers": {
+            "headers": {
         "Access-Control-Allow-Origin": "*"
       }
+        },
+     
     ]
 }
