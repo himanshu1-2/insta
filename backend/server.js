@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors({cors: {
     origin: "*"
   }}));
-const io = require('socket.io')(server, { origins: '*:*'});
+const io = require('socket.io')(server, { origins: 'https://insta-3n6i.vercel.app'});
 
 const USER_SOCKET_MAP = new Map();
 
