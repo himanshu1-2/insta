@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors({cors: {
     origin: "*"
   }}));
-const io = require('socket.io')(Server, {
+const io = require('socket.io')(server, {
   transports: ['websocket', 'polling'],
   cors: {
     origin: '*',
