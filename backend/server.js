@@ -8,14 +8,13 @@ app.use(express.json());
 app.use(cors({cors: {
     origin: "*"
   }}));
-const io = require('socket.io')(server, {
-    cors: {
-        origin: "*",
-        methods: ["GET", "POST"],
-        transports: ['websocket', 'polling'],
-        credentials: true
-    },
-    allowEIO3: true
+const io = require('socket.io')(Server, {
+  transports: ['websocket', 'polling'],
+  cors: {
+    origin: '*',
+    credentials: true,
+    methods: ['GET', 'POST'],
+  },
 });
 
 const USER_SOCKET_MAP = new Map();
