@@ -11,7 +11,7 @@ app.use(cors({cors: {
 const io = require('socket.io')(server, {
   transports: ['websocket', 'polling'],
   cors: {
-    origin: '*',
+    origin: 'https://insta-3n6i.vercel.app',
     methods: ['GET', 'POST'],
   },
 });
