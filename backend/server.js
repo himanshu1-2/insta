@@ -8,13 +8,7 @@ app.use(express.json());
 app.use(cors({cors: {
     origin: "*"
   }}));
-const io = require('socket.io')(server, {
-  transports: ['websocket', 'polling'],
-  cors: {
-    origin: 'https://insta-3n6i.vercel.app',
-    methods: ['GET', 'POST'],
-  },
-});
+const io = require('socket.io')(server, { origins: '*:*'});
 
 const USER_SOCKET_MAP = new Map();
 
